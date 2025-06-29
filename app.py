@@ -4,6 +4,11 @@ from utils.llm_handler import generate_answer
 import streamlit as st
 import requests
 from markdown import markdown
+import os
+os.environ["CHROMA_DB_IMPL"] = "duckdb"
+
+from langchain_community.vectorstores import Chroma
+# ... rest of your imports and code ...
 
 
 
